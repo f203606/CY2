@@ -1,2 +1,2 @@
 # CY2
- Ctrl+PLay Curitiba Capão Raso
+ Ctrl+Play Curitiba Capão Raso
