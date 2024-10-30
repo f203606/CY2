@@ -75,7 +75,7 @@ nav > div > a:hover {
 }
 
 main {
-    min-width: 300px;
+    min-width: 400px;
     max-width: 1000px;
     background-color: white;    
     margin: auto;
