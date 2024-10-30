@@ -52,13 +52,15 @@ header > p {
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.282);
 }
 
-nav {
+nav > div {
+    display: flex;
+    justify-content: space-around;
     background-color: var(--cor5);
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.316);
 }
 
-nav > a {
+nav > div > a {
     color: var(--cor1);
     padding: 10px;
     border-radius: 5px;
@@ -67,7 +69,7 @@ nav > a {
     transition-duration: 0.5s;
 }
 
-nav > a:hover {
+nav > div > a:hover {
     background-color: var(--cor3);
     color: var(--cor5);
 }
@@ -92,7 +94,7 @@ main h1 {
 }
 
 main h2 {
-    font-family: var(--fonte-android);
+    font-family: var(--fonte1);
     color: var(--cor4);
     font-size: 1.3em;
     font-weight: normal;
