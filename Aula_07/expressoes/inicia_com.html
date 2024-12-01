@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressão Inicia com</title>
+    <style>
+        a {
+            font-size: 2em;
+        }
+        a[href ^= "pasta1/"] {
+            color: red;
+            background-color: black;
+        }
+       
+        a[href ^= "pasta3/"] {
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="pasta1/paginaA.html">Link 1</a>
+    <a href="pasta2/paginaB.html">Link 2</a>
+    <a href="pasta3/paginaC.html">Link 3</a>
+    <a href="pasta4/paginaD.html">Link 4</a>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+p {
+    font-size: 1.5em;
+}
+
+div > p {
+    background-color: lightgreen;
+}

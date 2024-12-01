@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/*Typical devices breakpoints
+---------------------------
+Pequenas telas: até 600px
+Celular: de 600 até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+---------------------------
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    position: relative;
+}
+
+div {
+    width: 300px;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.581);
+    border-radius: 20px;
+    font: normal 20pt fantasy;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url('../imagens/retrato.jpg'); 
+    }
+    div#paisagem {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url('../imagens/paisagem.jpg');
+    }
+    div#retrato {
+        display: none;
+    }
+}
