@@ -39,7 +39,7 @@ div {
     transform: translate(-50%, -50%);
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) {
     body {
         background-image: url('../imagens/retrato.jpg'); 
     }
@@ -48,7 +48,7 @@ div {
     }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
     body {
         background-image: url('../imagens/paisagem.jpg');
     }
