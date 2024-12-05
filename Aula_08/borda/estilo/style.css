@@ -50,7 +50,7 @@ div#box4 {
     margin: auto;
 }
 
-div > div {
+div#box4 > div {
     background-color: rgba(0, 0, 0, 0.63);
     padding: 20px;
     border-radius: 10px;

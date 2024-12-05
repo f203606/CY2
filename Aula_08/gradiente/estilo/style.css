@@ -5,27 +5,25 @@ body {
 }
 
 .container {
-    width: 100w;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.bloco {
+.conteudo {
     border-radius: 10px;
+    width: 200px;
+    height: 200px; 
 }
 
 #bloco1 {
-    width: 200px;
-    height: 200px;    
     background: linear-gradient(to right, orange, darkgreen);
     box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.742);
 }
 
 #bloco2 {
-    width: 200px;
-    height: 200px;
     background: radial-gradient(orange, darkgreen);
     box-shadow: -20px -20px 5px rgba(0, 0, 0, 0.74);
 }

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-image: url('../imagens/campo.jpg');
+    position: relative;
+}
+
+input {
+    padding: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+img#bola {
+    
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    
+}
