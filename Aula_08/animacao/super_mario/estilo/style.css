@@ -37,10 +37,12 @@
 }
 
 .game-board {
-    width: 80%;
+    width: 900px;
     height: 500px;
     background-image: url('../imagens/background.png');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     border: 1px solid black;
     margin: auto;
     position: relative;

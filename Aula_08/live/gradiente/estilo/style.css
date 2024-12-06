@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+    background-image: url('../imagens/gradiente001.jpg');
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.conteudo {
+    width: 200px;
+    height: 200px;
+}
+
+#bloco1 {
+    background: linear-gradient(to right,orange, green);
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.6);
+}
+
+#bloco2 {
+    background: radial-gradient(pink, red);
+    box-shadow: -20px -20px 5px rgba(0, 0, 0, 0.49);
+}
