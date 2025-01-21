@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 - Campo Minado</title>
+</head>
+<body>
+    <script>
+        let campo = [];
+        campo[1] = ["mar", "bomba", "mar", "bomba", "mar"];
+        campo[2] = ["mar", "mar", "mar", "mar", "mar"];
+        campo[3] = ["bomba", "mar", "mar", "bomba", "mar"];
+        campo[4] = ["mar", "mar", "mar", "mar", "bomba"];
+
+        for (let x = 1; x < 4; x++) {
+            let linha = prompt("Digite uma linha de 1 a 4");
+            let coluna = prompt("Digite uma coluna de 1 a 5");
+            let jogo = campo[linha][coluna+1];
+
+            if (jogo == "bomba") {
+                document.write("Game Over!");
+                break;
+            }
+            if (x == 3) {
+                document.write("Parabéns!");
+                document.write("<br>")
+                break;
+            }
+        }
+        document.write("FIM!")
+    </script>
+</body>
+</html>
