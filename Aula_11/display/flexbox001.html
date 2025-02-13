@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column; /*Main axis*/
+            justify-content: flex-start; /*Main axis*/
+            align-items: center; /*Cross axis*/
+            height: 80vh;
+            gap: 30px; /*espaçamento entre os itens*/ 
+            padding: 30px;
+            flex-wrap: wrap;
+            /*flex-flow: row wrap; direction e wrap*/
+            align-content: flex-start; /*alinhamento das linhas dentro de um contêiner, ao longo do eixo transversal */
+        }
+
+        .flex-item {
+            background-color: lightcoral;
+            border: 1px solid black;
+            flex-grow: 1;
+            flex-shrink: 1; /*perigoso desativar*/
+        }
+
+        .flex-item:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            /*font-size*/
+            /*order: 2;*/
+            flex-grow: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .flex-item:nth-child(2) {
+            align-self: flex-end;
+        }
+
+       .flex-item:last-child {
+            flex-grow: 0;
+            flex-basis: 100px;
+            /*shorthand 
+            flex: grow shrink basis;
+            */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="flex-container">
+        <!-- (div.flex-item>h1>{Item$})*10 -->
+        
+        <div class="flex-item">
+            <h1>item1</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item2</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item3</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item4</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item5</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item6</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item7</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item8</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item9</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item10</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>

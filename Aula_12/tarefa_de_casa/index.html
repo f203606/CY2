@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            width:500px;
+        }
+        ul {
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Calculador de IMC!</h1>
+    <h2>Dicas de Saúde</h2>
+    <p>Encontre dicas valiosas sobre como manter sua saúde em dia.</p>
+    <ul>
+        <li>Alimente-se bem com alimentos naturais.</li>
+        <li>Pratique exercícios regularmente.</li>
+        <li>Mantenha-se hidratado ao longo do dia.</li>
+    </ul>
+    <p>Você sabia que calcular seu IMC pode ajudar a monitorar a sua saúde?
+    <p><img src="imc.jpg" alt=""></p>
+
+    <script>
+        // Solicita o peso e altura ao usuário
+        let peso = prompt("Digite o seu peso (em kg):");
+        let altura = prompt("Digite a sua altura (em metros):");
+
+        // Converte os valores para número
+        peso = Number(peso);
+        altura = Number(altura);
+
+        // Calcula o IMC
+        let imc = peso / (altura * altura);
+
+        // Exibe o resultado na página
+        document.write("<h1>Seu IMC é: " + imc.toFixed(2) + "</h1>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 - Campo Minado</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, blue, orange);
+        }
+        h1, h2{
+            text-align: center;
+            color: white;
+        }
+        img{
+            display: block;
+            margin: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Jogo do Campo Minado</h1>
+    <script>
+        alert("\n\nBem-vindo ao Campo Minado! 🎮💣\n\nPrepare-se para o desafio! Você tem 3 tentativas para descobrir onde estão as bombas.\n\nBoa sorte e fique atento! ⚡");
+
+        let campo = [];
+        campo[1] = ["mar", "bomba", "mar", "bomba", "mar"];
+        campo[2] = ["mar", "mar", "mar", "mar", "mar"];
+        campo[3] = ["bomba", "mar", "mar", "bomba", "mar"];
+        campo[4] = ["mar", "mar", "mar", "mar", "bomba"];
+
+        for (let x = 1; x < 4; x++) {
+            let linha = prompt("Digite uma linha de 1 a 4");
+            let coluna = prompt("Digite uma coluna de 1 a 5");
+            let jogo = campo[linha][coluna-1];
+
+            if (jogo == "bomba") {
+                document.write("<h1>Game Over!</h1>");
+                document.write('<img src="bomba.png" alt="">');
+                break;
+            }
+            if (x == 3) {
+                document.write("<h1>Parabéns!</h1>");
+                document.write('<img src="vitoria.png" alt="">');
+                break;
+            }
+        }
+        document.write("<h2>FIM DE JOGO!</h2>");        
+    </script>
+</body>
+</html>

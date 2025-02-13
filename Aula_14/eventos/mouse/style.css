@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    background: rgb(195, 143, 2);
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.434);
+}
+
+section div {
+    text-align: center;
+}
+
+section div input {
+    border-radius: 10px;
+    font-size: 20px;
+}
