@@ -31,22 +31,22 @@
         campo[4] = ["mar", "mar", "mar", "mar", "bomba"];
 
         for (let x = 1; x < 4; x++) {
-            //Pedir uma linha para o jogador
-            //Pedir uma coluna para o jogador
+            let linha = prompt("Digite uma linha de 1 a 4");
+            let coluna = prompt("Digite uma coluna de 1 a 5");
             let jogo = campo[linha][coluna-1];
 
-            if (//verificar se a variável jogo é igual a "bomba") {
-                //Escrever game over na tela;
-                //"Escrever" uma imagem na tela;
+            if (jogo == "bomba") {
+                document.write("<h1>Game Over!</h1>");
+                document.write('<img src="bomba.png" alt="">');
                 break;
             }
-            if (//verificar se x é igual a 3) {
-                //Escrever parabéns na tela;
-                //"Escrever" uma imagem na tela;
+            if (x == 3) {
+                document.write("<h1>Parabéns!</h1>");
+                document.write('<img src="vitoria.png" alt="">');
                 break;
             }
         }
-        document.write("<h2>FIM DE JOGO!</h2>");
+        document.write("<h2>FIM DE JOGO!</h2>");   
     </script>
 </body>
 </html>
