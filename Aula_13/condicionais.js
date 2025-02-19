@@ -8,7 +8,7 @@ else {
 }
 
 //Condicionais Aninhadas com comparação
-let hora = new Date().getHours()
+let hora = new Date().getHours();
 console.log(`Agora são ${hora} horas.`);
 if (hora < 12) {
     console.log('Bom dia!');
@@ -17,4 +17,3 @@ if (hora < 12) {
 } else {
     console.log('Boa noite!');
 }
-

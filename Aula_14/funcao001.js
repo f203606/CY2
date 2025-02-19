@@ -16,5 +16,6 @@ function areaDoQuadrado (lado) {
 }
 console.log(areaDoQuadrado(4));
 
+
 /* As variáveis definidas no escopo de uma função só podem ser acessadas nesse escopo.
 */

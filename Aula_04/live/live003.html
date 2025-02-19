@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Jão</title>
+    <style>
+        header{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        nav{
+            background-color: gray;
+            text-align: center;
+            padding: 30px;
+
+        }
+        nav a{
+            color: white;
+        }
+        svg{
+            display: block;
+            margin: auto;
+            border: 1px solid black;
+        }
+        article{
+            border: 1px solid black;
+            width: 600px;
+            margin: auto;
+            background-color: greenyellow;
+        }
+        video{
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Blog do Jão</h1>
+        <p>Aqui você encontra informações sobre tecnologia, esportes e games.</p>
+    </header>
+
+    <nav>
+        <a href="../../Aula_02/minha_pagina/minha_pagina.html">Contato</a>
+        <a href="../../Aula_03/tabelas.html">Esportes</a>
+        <a href="https://www.uol.com.br/" target="_blank">Notícias</a>
+    </nav>
+
+    <article>
+        <section class="figura">
+            <h2>Exercício com SVG</h2>
+            <svg width="300" height="300">
+                <rect x="100" y="25" width="100" height="100" fill="blue"></rect>
+                <circle r="25" cx="150" cy="160" fill="red">
+                    <animate attributeName="r" from="40" to="20" dur="0.5s" repeatCount="indefinite"></animate>
+                </circle>
+                <polygon points="150,280 100,200 200,200" fill="purple"></polygon>
+            </svg>
+        </section>
+
+        <section class="audio">
+            <h2>Exercício com áudio</h2>
+            <p>Hino do Soberano</p>
+            <audio src="midia/hino-sao-paulo-fc.mp3"  controls></audio>
+
+
+        </section>
+
+        <section class="video">
+            <h2>Exercício com vídeo</h2>
+            <video src="midia/ctrlplay.mp4" controls poster="midia/ctrlplay-capa.png"></video>
+        </section>
+    </article>
+
+    <footer>
+        <p>Página criada pelo André da Ctrl+Play</p>
+    </footer>
+</body>
+</html>
