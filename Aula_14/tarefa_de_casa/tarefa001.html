@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: #fff;
+        text-align: center;
+    }
+    .action-message {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #00FF00;
+    }
+    .highlight {
+        color: yellow;
+        font-weight: bold;
+    }
+    .key-actions {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>FPS - Ações no Jogo</h1>
+<div class="key-actions">
+<p><strong>Comandos:</strong></p>
+<ul>
+    <li>W: Andar para frente</li>
+    <li>A: Andar para a esquerda</li>
+    <li>S: Andar para trás</li>
+    <li>D: Andar para a direita</li>
+    <li>Espaço: Pular</li>
+    <li>Shift: Correr</li>
+    <li>Ctrl: Agachar</li>
+    <li>Mouse Esquerdo: Atirar</li>
+    <li>Mouse Direito: Mirar</li>
+    <li>R: Recarregar</li>
+</ul>
+</div>
+
+<div class="action-message" id="actionMessage">
+Aguarde a ação...
+</div>
+
+<script>
+// Função para exibir a mensagem com a ação realizada
+function showActionMessage(message) {
+    document.getElementById('actionMessage').innerText = message;
+}
+
+// Detecta quando uma tecla é pressionada
+window.addEventListener('keydown', function(event) {
+    let action = '';
+    switch(event.key) {
+        case 'w':
+            action = 'Você está indo para frente!';
+            break;
+        case 'a':
+            action = 'Você está indo para a esquerda!';
+            break;
+        case 's':
+            action = 'Você está indo para trás!';
+            break;
+        case 'd':
+            action = 'Você está indo para a direita!';
+            break;
+        case ' ':
+            action = 'Você pulou!';
+            break;
+        case 'Shift':
+            action = 'Você está correndo!';
+            break;
+        case 'Control':
+            action = 'Você está agachando!';
+            break;
+        case 'r':
+            action = 'Você está recarregando a arma!';
+            break;
+        default:
+            return; // Se a tecla não estiver na lista, não faz nada
+    }
+    showActionMessage(action);
+});
+
+// Detecta quando o mouse é clicado
+window.addEventListener('mousedown', function(event) {
+    let action = '';
+    if (event.button === 0) { // Mouse esquerdo (botão 0)
+        action = 'Você atirou!';
+    } else if (event.button === 2) { // Mouse direito (botão 2)
+        action = 'Você está mirando!';
+    }
+    if (action) {
+        showActionMessage(action);
+    }
+});
+
+// Previne o menu de contexto do clique direito do mouse
+window.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+</script>
+
+</body>
+</html>
