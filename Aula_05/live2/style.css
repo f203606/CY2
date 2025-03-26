@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+h1 {
+    background-color: aqua;
+    color: red;
+}
+h2 {
+    background-color: lightsalmon;
+    color: yellow;
+}
+p {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}

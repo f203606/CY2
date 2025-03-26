@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personagem</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .topo {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .topo h1 {
+            margin: 0;
+        }
+
+        .conteiner-topo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .conteiner-topo div {
+            flex: 1;
+        }
+
+        .conteiner-topo input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .conteiner-modificadores {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .modificador {
+            text-align: center;
+            flex: 1;
+        }
+
+        .modificador input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .conteiner-biografia, .conteiner-equipamento, .conteiner-caracteristicas {
+            margin: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Ficha de Personagem RPG</h1>
+    </header>
+
+    <main>
+        <section class="conteiner-topo">
+            <div class="conteiner-nome-personagem">
+                <p><strong>Nome do Personagem</strong></p>
+                <input type="text" placeholder="Digite o nome do personagem">
+            </div>
+            <div class="conteiner-nome-jogador">
+                <p><strong>Nome do Jogador</strong></p>
+                <input type="text" placeholder="Digite o nome do jogador">
+            </div>
+            <div class="conteiner-pontos-xp">
+                <p><strong>Pontos de Experiência</strong></p>
+                <input type="number" placeholder="Pontos de XP">
+            </div>
+        </section>
+
+        <section class="conteiner-topo">
+            <div class="conteiner-raca">
+                <p><strong>Raça</strong></p>
+                <input type="text" placeholder="Digite a raça do personagem">
+            </div>
+            <div class="conteiner-classe">
+                <p><strong>Classe</strong></p>
+                <input type="text" placeholder="Digite a classe do personagem">
+            </div>
+            <div class="conteiner-alinhamento">
+                <p><strong>Alinhamento</strong></p>
+                <input type="text" placeholder="Digite o alinhamento">
+            </div>
+        </section>
+
+        <section class="conteiner-modificadores">
+            <div class="modificador">
+                <p><strong>FOR</strong></p>
+                <input type="number" placeholder="Força">
+            </div>
+            <div class="modificador">
+                <p><strong>DES</strong></p>
+                <input type="number" placeholder="Destreza">
+            </div>
+            <div class="modificador">
+                <p><strong>CON</strong></p>
+                <input type="number" placeholder="Constituição">
+            </div>
+            <div class="modificador">
+                <p><strong>INT</strong></p>
+                <input type="number" placeholder="Inteligência">
+            </div>
+            <div class="modificador">
+                <p><strong>SAB</strong></p>
+                <input type="number" placeholder="Sabedoria">
+            </div>
+            <div class="modificador">
+                <p><strong>CAR</strong></p>
+                <input type="number" placeholder="Carisma">
+            </div>
+        </section>
+
+        <section class="conteiner-biografia">
+            <h2>Biografia</h2>
+            <textarea rows="10" placeholder="Escreva a biografia do personagem..."></textarea>
+        </section>
+
+        <section class="conteiner-equipamento">
+            <h2>Equipamentos</h2>
+            <textarea rows="10" placeholder="Digite os equipamentos do personagem..."></textarea>
+        </section>
+
+        <section class="conteiner-caracteristicas">
+            <h2>Características</h2>
+            <textarea rows="10" placeholder="Digite as características do personagem..."></textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p>🚀 Ficha de Personagem - Criado por Ctrl + Play</p>
+    </footer>
+
+</body>
+</html>

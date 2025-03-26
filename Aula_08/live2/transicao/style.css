@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body {
+    height: 90vh;
+    background: url('./imagens/desktop_1980px.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+section {
+    text-align: right;
+}
+
+img {
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+img:hover {
+    transform: translate(-3px, -3px);
+    border: 2px solid white;
+    transition: transform 0.5s , border 0.3s;
+}

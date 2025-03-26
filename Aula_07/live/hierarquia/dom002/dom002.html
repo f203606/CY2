@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de DOM</title>
+</head>
+<body>
+    <h1>Praticando DOM</h1>
+    <h2>Calculadora</h2>
+    <input type="number" id="texto_n1"> + 
+    <input type="number" id="texto_n2">
+    <input type="button" value="somar" onclick="soma()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function soma() {
+            var n1_txt = window.document.querySelector('input#texto_n1')
+            var n2_txt = window.document.querySelector('input#texto_n2')
+            var resultado = window.document.querySelector('div#res')
+
+            var n1 = Number(n1_txt.value)
+            var n2 = Number(n2_txt.value)
+            var s = n1 + n2
+
+            resultado.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}.`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100vw;
+            height: 200px;
+            background-color: black;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        header p{
+            margin-top: 30px;
+        }
+
+        nav{
+            background-color: black;
+            text-align: center;
+            width: 100vw;
+        }
+
+        nav a{
+            color: white;
+            font-size: 20px;
+            padding: 30px;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: blue;
+            font-size: 25px;
+        }
+        main{
+            width: 900px;
+            background-color: black;
+            color: white;
+            margin: auto;
+            padding: 30px;
+        }
+
+        main h2{
+            padding: 20px;
+        }
+
+        svg{
+            display: block;
+            margin: auto;
+            border: 1px solid white;
+        }
+
+        p{
+            padding: 10px;
+        }
+        video{
+            display: block;
+            margin: auto;
+        }
+
+        footer {
+            width: 900px;
+            background-color: black;
+            color: white;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog do Giovanni</h1>
+        <p>Aqui você encontra as últimas notícias sobre o Sonic</p>
+    </header>
+    
+    <nav>
+        <a href="">What's new</a>
+        <a href="">Games</a>
+        <a href="">Loja</a>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+                <h2>Sonic Shadow Generations</h2>
+                <svg width="300" height="300">
+                    <rect x="100" y="10" width="100" height="100" fill="blue">
+                        <animate attributeName="y" from="10" to="100" dur="0.5s" repeatCount="indefinite"></animate>
+                    </rect>
+                    <circle r="25" cx="150" cy="170" fill="red">
+                        <animate attributeName="r" from="25" to="50" dur="0.5s" repeatCount="indefinite"></animate>
+                    </circle>
+                    <polygon points="100,220 200,220 150,280" fill="green"></polygon>
+                </svg>
+            </section>
+            <section>
+                <h2>Sonic Rumble</h2>
+                <p>Dark Fortress Zone</p>
+                <audio src="midia/Dark Fortress Zone.mp3" controls></audio>
+            </section>
+            <section>
+                <h2>Sonic Abertura</h2>
+                <p>Abertura do game Sonic CD toda em estilo Anime, versão Americana.</p>
+                <video src="https://www.powersonic.com.br/files/videos/sonicd_usa_hd.mp4" width="500" controls></video>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>© SEGA. SEGA, the SEGA logo and SONIC THE HEDGEHOG are either registered trademarks or trademarks of SEGA Holdings Co., Ltd. or its affiliates. All rights reserved. SEGA is registered in the U.S. Patent and Trademark Office. All other trademarks, logos and copyrights are property of their respective owners.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            background-image: url(./imagens/background.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="game" width="1000" height="600"></canvas>
+    </div>
+
+    <script>
+        //Obtém o contexto do canvas
+        const canvas = document.getElementById("game");
+        const game = canvas.getContext("2d");
+
+        // Carregar a imagem
+        let img = new Image();
+        img.src = "./imagens/frame-1.png"; // Substitua pelo caminho da sua imagem
+
+        //Bloco
+        const blocoLargura = 100;
+        const blocoAltura = 100;
+        let blocoX = canvas.width/2 - blocoLargura/2;
+        let blocoY = canvas.height - 200;
+
+        //Plataforma
+        const plataformaLargura = 1000;
+        const plataformaAltura = 20;
+        let plataformaX = canvas.width/2 - plataformaLargura/2;
+        const plataformaY = canvas.height - 150;
+
+        // Velocidade e gravidade do bloco
+        let velocidadeY = 0;  // Velocidade vertical
+        const gravidade = 0.5;  // Gravidade
+        const forcaPulo = -15;  // Potência do pulo
+
+        //Estado do pulo
+        let estaPulando = false;
+
+        //Velocidade
+        const velocidadeBloco = 10;
+
+        // Estado do movimento horizontal
+        let movendoParaDireita = false;
+        let movendoParaEsquerda = false;
+
+        //Função desenhar bloco
+        function desenhaBloco() {
+            //game.fillStyle = "blue";
+            //game.fillRect(blocoX, blocoY, blocoLargura, blocoAltura);
+            game.drawImage(img, blocoX, blocoY, blocoLargura, blocoAltura);
+        }
+
+        //Função desenha plataforma
+        function desenhaPlataforma() {
+            game.fillStyle="gray";
+            game.fillRect(plataformaX, plataformaY, plataformaLargura, plataformaAltura);
+        }
+
+        //Função desenha jogo
+        function desenhaJogo() {
+            game.clearRect(0, 0, canvas.width, canvas.height);
+            desenhaBloco();
+            desenhaPlataforma();
+            //Movimentação Vertical
+            if (blocoY + blocoAltura < plataformaY) {
+                velocidadeY += gravidade;  // Aplica a gravidade
+                blocoY += velocidadeY;  // Atualiza a posição vertical do bloco
+            } else {
+                blocoY = plataformaY - blocoAltura;  //bloco sobre a plataforma
+                velocidadeY = 0;  // Bloqueia o movimento vertical
+                estaPulando = false;
+            }
+            // Movimentação horizontal
+            if (movendoParaDireita && blocoX + blocoLargura < canvas.width) {
+                blocoX += velocidadeBloco; // Move o bloco para a direita
+            }
+            if (movendoParaEsquerda && blocoX > 0) {
+                blocoX -= velocidadeBloco; // Move o bloco para a esquerda
+            }
+            requestAnimationFrame(desenhaJogo);    
+        }
+      
+        //Função para mover o bloco
+        addEventListener("keydown", function(event) {
+            if(event.code == "KeyA") {
+                movendoParaEsquerda = true;
+            } else if (event.code == "KeyD") {
+                movendoParaDireita = true;
+            } else if (event.code == "Space" && !estaPulando) {
+                blocoY += forcaPulo;
+                estaPulando = true;
+                velocidadeY = forcaPulo;
+            }
+        });
+
+        // Função para parar o movimento quando a tecla for solta
+        addEventListener("keyup", function (event) {
+            if (event.code == "KeyA") {
+                movendoParaEsquerda = false; // Para o movimento para a esquerda
+            } else if (event.code == "KeyD") {
+                movendoParaDireita = false; // Para o movimento para a direita
+            }
+        });
+        desenhaJogo();
+    </script>
+</body>
+</html>

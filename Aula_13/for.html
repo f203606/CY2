@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetiçaõ for</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        tr, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        let sair = "nao";
+        let cont = 0;
+        let produtos =[];
+        
+        while(sair != "sim") {
+            let item = prompt("Digite um produto: ");
+            produtos.push(item);
+            sair = prompt("[sim]: para sair");
+        }
+        document.write("<table>");
+            for(let linha = 0; linha < 10; linha++) {
+                document.write("<tr>");
+                    for(let coluna = 0; coluna < produtos.length; coluna++) {
+                        document.write("<td>");
+                        document.write(produtos[coluna]);
+                        document.write("</td>");
+                    }
+                document.write("</tr>");
+            }
+    </script>
+</body>
+</html>

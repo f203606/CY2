@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa CY2 Aula 14</title>
+    <style>
+        @keyframes animacao {
+            0% {
+                left: 10%;
+                transform: scaleX(1); /* Imagem normal */
+            }
+            50% {
+                left: 90%;
+                transform: scaleX(1); /* Imagem normal */
+            }
+            51% {
+                left: 90%;
+                transform: scaleX(-1); /* Imagem espelhada */
+            }
+            100% {
+                left: 10%;
+                transform: scaleX(-1); /* Imagem espelhada */
+            }
+        }
+
+        body{
+            width: 95vw;
+            height: 95vh;
+            background-image: url(imagens/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        #mensagem{
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            color: darkred;
+        }
+
+        .container {
+            width: 90vw;
+            height: 500px;
+            margin: auto;
+            position: relative;
+        }
+
+        .alvo {
+            position: absolute;
+        }
+
+        #alvo1 {
+            top: 10%;
+            left: 20%;
+            animation: animacao 15s infinite linear;
+        }
+
+        #alvo2 {
+            top: 30%;
+            left: 10%;
+            animation: animacao 20s 2s infinite linear;
+        }
+
+        #alvo3 {
+            top: 70%;
+            left: 10%;
+            animation: animacao 25s 4s infinite linear;
+        }
+    
+        img{
+            display: block;
+            width: 100px;
+            margin: auto;
+        }
+
+        #tanque{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FPS - Seleção Brasileira de FPS</h1>
+    <div>
+        <p><strong>Comandos:</strong></p>
+        <ul>
+            <li>Passar o mouse: Mirar</li>
+            <li>Um clique: Atirar</li>  
+        </ul>
+    </div>
+
+    <div id="mensagem">
+        Aguardando a ação...
+    </div>
+
+    <!-- Elementos para selecionar como alvo -->
+    <div class="container">
+        <div onmouseover="mirou()" onmouseleave="naoMirou()" onclick="tiro()" id="alvo1" class="alvo"><img src="imagens/mira.png" alt=""></div>
+
+        <div onmouseover="mirou()" onmouseleave="naoMirou()" onclick="tiro()" id="alvo2" class="alvo"><img src="imagens/nave.png" alt=""></div>
+
+        <div onmouseover="mirou()" onmouseleave="naoMirou()" onclick="tiro()" id="alvo3" class="alvo"><img id="tanque" src="imagens/tanque.png" alt=""></div>
+
+    </div>
+
+    <script>
+        function mirou() {
+            document.getElementById("mensagem").innerHTML="Na mira";
+        }
+
+        function naoMirou() {
+            document.getElementById("mensagem").innerHTML="Fora de mira";
+        }
+
+        function tiro() {
+            document.getElementById("mensagem").innerHTML="Atirou";
+        }
+    </script>
+
+</body>
+</html>

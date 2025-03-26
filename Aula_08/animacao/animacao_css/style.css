@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@keyframes animacao {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        top: 400px;
+        left: 800px;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./imagens/campo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background: url('./imagens/bola_1000px.png');
+    background-size: cover;
+    position: absolute;
+    animation: animacao 3s 2s 4 alternate;
+}

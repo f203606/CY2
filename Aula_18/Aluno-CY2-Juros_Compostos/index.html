@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/rodape.css">
+</head>
+
+<body>
+    <main>
+
+        <section id="tabela">
+            <table class="tabela">
+                <tr>
+                    <th>Principal (P)</th>
+                    <th>Taxa de Juros (i)</th>
+                    <th>Tempo (t)</th>
+                    <th>Juros</th>
+                    <th>Montante</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="principal" class="campoTabela"></td>
+                    <td><input type="text" id="taxa" class="campoTabela"></td>
+                    <td><input type="text" id="tempo" class="campoTabela"></td>
+                    <td><input type="text" id="juros" class="campoTabela" disabled></td>
+                    <td><input type="text" id="montante" class="campoTabela" disabled></td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="botoes">
+            <div>
+                <input class="calcular" type="button" value="Calcular Juros Compostos" id="calcularCompostos">
+                <input class="resetar" type="button" value="Resetar" id="resetar">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="caixaFooter">Desenvolvido por <a href="" target="_blank">Aluno Ctrl+Play</a>.</div>
+    </footer>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>

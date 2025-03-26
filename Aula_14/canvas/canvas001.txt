@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="game" width="400" height="300"></canvas>
+    </div>
+
+    <script>
+        //Obtém o contexto do canvas
+        const canvas = document.getElementById("game");
+        const game = canvas.getContext("2d");
+
+        //Bloco
+        const blocoLargura = 30;
+        const blocoAltura = 30;
+        let blocoX = canvas.width/2 - blocoLargura/2;
+        let blocoY = canvas.height - 200;
+
+        //Plataforma
+        const plataformaLargura = 400;
+        const plataformaAltura = 20;
+        let plataformaX = canvas.width/2 - plataformaLargura/2;
+        const plataformaY = canvas.height - plataformaAltura;
+
+        //Velocidade
+        const velocidadeBloco = 5;
+
+        //Função desenhar bloco
+        function desenhaBloco() {
+            game.fillStyle = "blue";
+            game.fillRect(blocoX, blocoY, blocoLargura, blocoAltura);
+        }
+
+        //Função desenha plataforma
+        function desenhaPlataforma() {
+            game.fillStyle="black";
+            game.fillRect(plataformaX, plataformaY, plataformaLargura, plataformaAltura);
+        }
+
+        //Função desenha jogo
+        function desenhaJogo() {
+            game.clearRect(0, 0, canvas.width, canvas.height);
+            desenhaBloco();
+            desenhaPlataforma();
+            requestAnimationFrame(desenhaJogo);    
+        }
+
+        //Função para mover o bloco
+        addEventListener("keydown", function(event) {
+            if(event.code == "KeyA") {
+                if (blocoX > 0) {
+                    blocoX -= velocidadeBloco;
+                }
+            } else if (event.code == "KeyD") {
+                if (blocoX + blocoLargura < canvas.width) {
+                    blocoX += velocidadeBloco;
+                }
+            }
+        });
+
+        desenhaJogo();
+    </script>
+</body>
+</html>

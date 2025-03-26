@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+
+h1, h2 {
+    background-color: lightblue;
+    color: blue;
+}
+
+p {
+    background-color: lightsalmon;
+    color: darkred;
+}
+
+section h1 {
+    background-color: lightgreen;
+}
+
+section h2 {
+    background-color: lightgreen;
+}
+
+section.destaque {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+section.destaque h1 {
+    background-color: black;
+    color: white;
+}
+
+p#destaque2 {
+    font-size: 10px;
+}

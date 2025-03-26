@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semáforo</h1>
+    <svg width="500" height="300">
+        <rect x="200" y="50" width="100" height="200" fill="gray"/>
+        <circle cx="250" cy="100" r="20" stroke="black" stroke-width="1" fill="red" />
+        <circle cx="250" cy="150" r="20" stroke="black" stroke-width="1" fill="yellow" />
+        <circle cx="250" cy="200" r="20" stroke="black" stroke-width="1" fill="green" />
+      </svg>
+
+      <h1>Reproduzindo Aúdio</h1>
+      <audio autoplay="autoplay" src="midia/hino-sao-paulo-fc.mp3" type="audio/mpeg" controls></audio>
+      <p>Hino do São Paulo Futebol Clube</p>
+
+      <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio computador</p>
+    <video width="560" poster="imagens/ctrlplay-capa.png" controls autoplay loop>
+        <source src="midia/ctrlplay.webm" type="video/webm">
+        <source src="midia/ctrlplay.mkv" type="video/mkv">
+        <source src="midia/ctrlplay.ogv" type="video/ogg">
+        <source src="midia/ctrlplay.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+    </video>
+</body>
+</html>

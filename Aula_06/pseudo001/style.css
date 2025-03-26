@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
+p::first-letter {
+    font-size: 3em;
+}
+
+p::after {
+    content: "▶ ";
+}

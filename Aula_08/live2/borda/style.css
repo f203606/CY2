@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#box1 {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+div#box2 {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+div#box3 {
+    width: 500px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-image: url("imagens/paisagem.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+div#box4 {
+    width: 500px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-image: url("imagens/paisagem.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+div#box4 div {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}

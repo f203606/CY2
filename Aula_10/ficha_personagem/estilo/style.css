@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    background-color: rgb(123, 110, 110);
+    font-size: 20px;
+}
+
+.topo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner-topo {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 900px;
+    height: 150px;
+}
+
+.conteiner-topo > div {
+    padding: 10px;
+}
+
+.conteiner-topo > div p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.conteiner-topo > div input {
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+}

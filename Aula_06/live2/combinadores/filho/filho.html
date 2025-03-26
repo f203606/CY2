@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores</title>
+    <style>
+        div > p {
+            background-color: lightcoral;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Filho: div > p </h1>
+    <div>
+        <p>Aqui temos um parágrafo descendente dentro da div</p>
+        <section>
+            <p>Parágrafo dentro da (div > section) também é um descendente. Não é filho.</p>
+        </section>
+    </div>
+
+    <p>Aqui temos um parágrafo fora da div.</p>
+</body>
+</html>

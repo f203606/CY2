@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades do HTML5</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site de Podcast</h1>
+    </header>
+
+    <nav>
+        <div>
+            <a href="../../Aula_03/brasileirao.html">Esportes</a>
+            <a href="https://www.uol.com.br/">Notícias</a>
+            <a href="../../Aula_02/minha_pagina.html">Contatos</a>
+            <a href="">Podcast</a>
+        </div>
+    </nav>
+
+    <article>
+
+        <section class="graficos">
+            <h2>SVG</h2>
+            <p>Fazendo um semáforo</p>
+            <svg width="400" height="300">
+                <rect x="150" y="50" width="100" height="200" fill="gray"/>
+                <circle cx="200" cy="100" r="20" stroke="black" stroke-width="1" fill="red" />
+                <circle cx="200" cy="150" r="20" stroke="black" stroke-width="1" fill="yellow" />
+                <circle cx="200" cy="200" r="20" stroke="black" stroke-width="1" fill="green" />
+
+            </svg>
+        </section>
+
+        <section class="audios">
+            <h2>Áudios</h2>
+            <p>Aqui colocaremos nossos áudios </p>
+            <div>
+                <img id="destaque" src="imagens/sao_paulo_64px.png" alt="Logo SPFC">
+                
+                <audio src="midia/hino-sao-paulo-fc.mp3"    type="audio/mpeg" controls></audio>
+            </div>
+        </section>        
+
+        <section class="videos">
+            <h2>Vídeos</h2>
+            <p>Aqui colocaremos nossos vídeos</p>
+            <video src="midia/ctrlplay.mp4" controls loop></video>
+
+        </section>
+        
+        <aside>
+            <h4>Quer saber mais?</h4>
+            <br>
+        </aside>
+
+    </article>
+ 
+    <footer>
+        <p>Site criado pelo André da Ctrl+Play.</p>
+    </footer>
+    
+</body>
+</html>

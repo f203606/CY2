@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Display Flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: deeppink;
+            height: 80vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            gap: 30px;
+            flex-direction: row;
+        }
+
+        .flex-item {
+            background-color: lightblue;
+            border: 1px solid black;
+
+            flex-grow: 1;
+
+        }
+
+        .flex-item:nth-child(1) {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .flex-item:nth-child(3) {
+            align-self: flex-start;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="flex-item">
+            <h1>item1</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item2</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item3</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item4</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item5</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item6</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item7</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item8</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item9</h1>
+        </div>
+        <div class="flex-item">
+            <h1>item10</h1>
+        </div>
+
+    </div>
+</body>
+</html>

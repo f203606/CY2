@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Eventos - Selecionando por Id</h1>
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <div id="exemplo" onclick="clicar()">
+        Clicar
+    </div>
+
+    <div id="aleatorio" onclick="gerarNumeroAleatorio()">
+        Aleatório
+    </div>
+
+    <script>
+        function clicar() {
+            let ex = document.getElementById('exemplo');
+            ex.innerHTML = 'Ctrl+Play'
+        }
+
+        function gerarNumeroAleatorio() {
+            let aleatorio = document.getElementById('aleatorio')
+            let array_numeros_aleatorios = [];
+
+            for (let i = 0; i < 6; i++) {
+                array_numeros_aleatorios[i] = Math.random();
+            }
+            aleatorio.innerHTML = array_numeros_aleatorios[0];
+            return array_numeros_aleatorios;
+        }
+    </script>
+</body>
+</html>

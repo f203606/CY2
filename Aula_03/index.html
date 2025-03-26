@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 3px solid black;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Link Externo</h1>
+    <p>Link para a página do <a href="https://www.google.com/" target="_blank" rel="external">Google</a>.</p>
+    <h1>Link Interno</h1>
+    <p>Acesse a nossa página de <a href="paginas/noticias.html" target="_self">notícias</a>.</p>
+    <p>Acesse a nossa página de <a href="paginas/tecnologia.html" target="_self" rel="next">tecnologia</a>.</p>
+    <h1>Link para download</h1>
+    <p>Baixar o arquivo zipado <a href="downloads/meu_arquivo.zip" download="meu_arquivo.zip" type="application/zip">PDF</a>.</p>
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <p>Saiba mais na página da Ctrl+Play</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/U3slVhcNQt8?si=zzn4rlvzDtjjapZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>Listas</h1>
+    <h2>Listas ordenadas</h2>
+    <ol type="A">
+        <li>Spider Man</li>
+        <li>Batman</li>
+        <li>Hulk</li>
+    </ol>
+    <ol start="3">
+        <li>Pythton</li>
+        <ul type="circle">
+            <li>Condicionais: <code>if else</code></li>
+            <li>Loops de repetição: <code>for while</code></li>
+            <li>Funções: <code>def</code></li>
+        </ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>Listas Não ordenadas</h2>
+    <ul type="square">
+        <li>PlayStation</li>
+        <li>Snes</li>
+        <li>XBox</li>
+    </ul>
+
+    <h1>Tabelas</h1>
+    <table>
+        <tr>
+            <th>Sigla</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Hypertext Markup Language</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Cascading Style Sheets</td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>#1</td>
+            <td>Computador</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>#1</td>
+            <td>Computador</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>#1</td>
+            <td>Celular</td>
+            <td>5</td>
+        </tr> <tr>
+            <td colspan="2">Total</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+    <h1>Caracteres especiais</h1>
+    <p>Se precisar quebrar
+        quebrar o texto em algum lugar
+        específico <br/> como esse, você pode usar a tag &lt;br&gt;.
+    </p>
+    <p>Vamos adicionar alguns símbolos especiais. Ver mais detalhes no W3 Schools
+        &reg;
+        &copy;
+        &euro;
+        &cent;
+        &Delta;
+        &#8383
+    </p>
+    <p>Vamos adicionar alguns emojis. Ver mais detalhes no emojipedia:
+        &#x1F596
+        &#x1F913
+        ✔️
+        &#x2714
+    </p>
+</body>
+</html>

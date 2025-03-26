@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        /* Estilo básico do botão */
+        button {
+            background-color: #3498db; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: 2px solid transparent; /* Borda transparente */
+            padding: 15px 30px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Mudar o cursor para uma mãozinha */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+        }
+
+        /* Efeito hover */
+        button:hover {
+            background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+            transform: scale(1.5); /* Aumenta o tamanho do botão */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            border-color: #2980b9; /* Cor da borda ao passar o mouse */
+        }
+
+        img {
+            transition: all 1s ease;
+        }
+        img:hover {
+            transform: scale(1.5);
+        }
+
+    </style>
+
+</head>
+<body>
+    <button>Hover me!</button>
+    <img src="charizard.png" alt="">
+</body>
+</html>

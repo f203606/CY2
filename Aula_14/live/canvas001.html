@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="game" width="400px" height="300px">
+
+        </canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("game");
+        const game = canvas.getContext("2d");
+
+        //Bloco
+        const blocoLargura = 30;
+        const blocoAltura = 30;
+        let blocoX = canvas.width/2 - blocoLargura/2;
+        let blocoY = canvas.height - 200;
+
+        //Plataforma
+        const plataformaLargura = 400;
+        const plataformaAltura = 20;
+        const plataformaX = 0;
+        const plataformaY = canvas.height - 100;
+
+        //Função desenhar bloco
+        function desenhoBloco() {
+            game.fillStyle = "blue";
+            game.fillRect(blocoX, blocoY, blocoLargura, blocoAltura)
+        }
+
+        //função desenha plataforma
+        function desenhaPlataforma(){
+            game.fillStyle = "red";
+            game.fillRect(plataformaX, plataformaY, plataformaLargura, plataformaAltura)
+        }
+
+        //Estado do movimento horizontal
+        let movendoParaDireita = false;
+        let movendoParaEsquerda = false;
+
+        //Função Desenha Jogo
+        function desenhaJogo(){
+            game.clearRect(0, 0, canvas.width, canvas.height);
+            desenhoBloco();
+            desenhaPlataforma();
+            //movimentação horizontal
+            if(movendoParaDireita) {
+                blocoX += 10;
+            }
+            if (movendoParaEsquerda) {
+                blocoX -=10;
+            }
+            requestAnimationFrame(desenhaJogo);
+        }
+
+        //Função para movimentar o bloco
+        addEventListener("keydown", function(event){
+            if(event.code == "KeyA"){
+                movendoParaEsquerda = true;
+            } else if(event.code == "KeyD"){
+                movendoParaDireita = true;
+            }
+        })
+
+        //Função para quando soltar a tecla
+        addEventListener("keyup", function (event){
+            if(event.code=="KeyA"){
+                movendoParaEsquerda = false;
+            } else if(event.code == "KeyD"){
+                movendoParaDireita = false
+            }
+        }
+
+        )
+
+
+
+        desenhaJogo();
+
+
+
+    </script>
+</body>
+</html>

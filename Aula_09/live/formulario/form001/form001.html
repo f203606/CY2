@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício com formulário</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="cadastro.php" method="post">
+
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu">
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+    <h1>Faça o seu cadastro</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+            <p>
+                <label for="imail">E-mail: </label>
+                <input type="email" name="email" id="iemail">
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" placeholder="(xx) yyyy-zzzz">
+            </p>
+          
+            <p>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha" minlength="8">
+            </p>
+
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+        
+
+
+    </form>
+</body>
+</html>

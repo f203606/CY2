@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes animacao {
+            0% {
+                left: 10%;
+            }
+            50% {
+                left: 80%;
+                top: 70%;
+            }
+            51% {
+                left: 80%;
+                top: 70%;
+            }
+            100% {
+                left: 10%;
+            }
+        }
+        body {
+            width: 95vw;
+            height: 95vh;
+            background-image: url(imagens/background.png);
+            background-position: center bottom;
+            background-size: cover;
+        }
+        .container{
+            width: 90vw;
+            height: 500px;
+            position: relative;
+            margin: auto;
+            border: 2px solid black;
+        }
+        .alvo {
+            position: absolute;
+        }
+        #alvo1{
+            top: 10%;
+            left: 10%;
+            animation: animacao 2s 3s infinite;
+        }
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FPS Seleção Brasileira de FPS</h1>
+    <div>
+        <p>Comandos</p>
+        <ul>
+            <li>Passar o mouse: mirar</li>
+            <li>Clique: atirar</li>
+        </ul>
+    </div>
+
+    <div id="mensagem">
+        Aguardando a ação...
+    </div>
+
+    <div class="container">
+        <div onmou onmouseover="mirou()" class="alvo" id="alvo1">
+            <img src="imagens/mira.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        function mirou() {
+            document.getElementById("mensagem").innerHTML="Mirou"
+        }
+        function atirou() {
+
+        }
+        function saiuMira() {
+
+        }
+    </script>
+</body>
+</html>

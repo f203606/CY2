@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício com elementos HTML</h1>
+    <img onclick="guerreiro()" src="imagens/guerreiro.jpg" alt="">
+    <img onclick="mago()" src="imagens/mago.jpg" alt="">
+    <p id="historia"></p>
+
+    <script>
+        let historiaMago = prompt("Crie a sua historia")
+
+        function guerreiro(){
+            document.getElementById("historia").innerHTML = "Aqui está a história do guerreiro";
+        }
+
+        function mago(){
+            document.getElementById("historia").innerHTML = historiaMago;
+        }
+    </script> 
+</body>
+</html>

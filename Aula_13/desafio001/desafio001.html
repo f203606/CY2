@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio array</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        tr, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let cont = 0, sum = 0;
+        let lista = [];
+        let temp_list = [];
+        let opcao = "s";
+        document.write("<table>");
+        do {
+            let produto = prompt("Digite o produto");
+            let preco = Number(prompt("Digite o preço: "));
+            temp_list.push(produto);
+            temp_list.push(preco);
+            lista.push(temp_list);
+            sum += preco;
+                     
+            document.write("<tr>");
+                document.write("<td>");
+                document.write(lista[cont][0]);            
+                document.write("</td>");
+
+                document.write("<td>");
+                document.write(lista[cont][1]); 
+                document.write("</td>");
+            document.write("</tr>");
+            
+            cont++;
+            temp_list = [];
+            opcao = prompt("Tecle [s] para sair: ");
+        } while (opcao != "s");
+
+        document.write("<tr>");
+            document.write("<td>");
+            document.write("Total");            
+            document.write("</td>");
+
+            document.write("<td>");
+            document.write(sum); 
+            document.write("</td>");
+        document.write("</tr>");
+    
+    </script>
+</body>
+</html>

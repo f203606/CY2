@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personagem</title>
+
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+<body class="text-xl bg-black">
+    <header class="w-screen flex justify-center">
+        <section class="bg-slate-300 grid grid-cols-3 items-center justify-items-center w-[900px] h-[300px] p-3">
+            <div>
+                <p class="label">Nome personagem</p>
+                <input class="input" type="text" name="" id="">
+            </div>
+            <div>
+                <p class="label">Nome jogador</p>
+                <input type="text" name="" id="" class="input">
+            </div>
+            <div>
+                <p class="label">Pontos de experiência</p>
+                <input type="text" name="" id="" class="input">             
+            </div>
+            <div>
+                <p class="label">Raça</p>
+                <input type="text" name="" id="" class="input">             
+            </div>
+            <div>
+                <p class="label">Classe</p>
+                <input type="text" name="" id="" class="input">             
+            </div>
+            <div>
+                <p class="label">Alinhamento</p>
+                <input type="text" name="" id="" class="input">             
+            </div>
+        </section>
+    </header>
+
+    <main class="flex flex-col justify-center items-center w-screen">
+        <section class="w-[900px] h-[500px] bg-slate-300 grid grid-cols-[0.5fr_1.5fr_1fr] p-3">
+            <div class="flex flex-col justify-between pl-[30px]">
+                <div>
+                    <p>FOR</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+                <div>
+                    <p>DES</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+                <div>
+                    <p>CON</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+                <div>
+                    <p>INT</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+                <div>
+                    <p>SAB</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+                <div>
+                    <p>CAR</p>
+                    <input type="text" class="w-[200px]">
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-end">
+                <div class="h-full grid grid-cols-3 pl-[30px]">
+                    <div>
+                        <p>Vida</p>
+                        <input type="text" class="w-[90%]">
+                    </div>
+                    <div>
+                        <p>Defesa</p>
+                        <input type="text" class="w-[90%]">
+                    </div>
+                    <div>
+                        <p>Velocidade</p>
+                        <input type="text" class="w-[90%]">
+                    </div>
+                </div>
+                
+                <div> 
+                    <img src="imagens/my_character.png" alt="" class="w-full h-full flex justify-center items-center">
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <h2>Biografia</h2>
+                <textarea name="" id="" cols="30" rows="15" class="resize-none p-[5px_10px] text-[15px]"></textarea>
+            </div>
+        </section>
+
+        <section class="w-[900px] h-[300px] grid grid-cols-2 justify-items-center bg-slate-300 p-3">
+            <div class="w-[400px] text-center">
+                <h2>Equipamentos</h2>
+                <textarea cols="30" rows="10" class="w-[90%]"></textarea>
+            </div>
+
+            <div class="w-[400px] text-center">
+                <h2>Características</h2>
+                <textarea cols="30" rows="10" class="w-[90%]"></textarea>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="w-screen h-[50px] flex justify-center">
+        <div class="w-[900px] bg-slate-300 text-center p-3">
+            🚀 <a href="">Ctrl + Play</a>
+        </div>
+    </footer>
+</body>
+</html>

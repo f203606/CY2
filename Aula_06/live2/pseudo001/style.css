@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: gray;
+    color: black;
+}
+
+p::first-letter {
+    font-size: 30px;
+}

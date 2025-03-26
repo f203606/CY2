@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/rodape.css">
+</head>
+
+<body>
+    <main>
+        <section id="tabela">
+            <table class="tabela">
+                <tr>
+                    <th>Temperatura</th>
+                    <th>Converter de</th>
+                    <th>Converter para</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr>
+                    <td><input type="number" id="tempInput" class="campoTabela tempInput" placeholder="Digite a temperatura"></td>
+                    <td>
+                        <select id="unidadeDe" class="campoTabela unidade">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="unidadePara" class="campoTabela unidade">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </td>
+                    <td><input type="text" id="resultado" class="campoTabela resultado" disabled placeholder="Resultado"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="botoes">
+            <div>
+                <input class="calcular" type="button" value="Converter" id="converter">
+                <input class="resetar" type="button" value="Resetar" id="resetar">
+            </div>
+        </section>
+
+        <section id="historico">
+            <h3>Histórico de Conversões</h3>
+            <table id="historicoTabela" class="tabela">
+                <tr>
+                    <th>Temperatura Original</th>
+                    <th>De</th>
+                    <th>Para</th>
+                    <th>Resultado</th>
+                </tr>
+                <!-- As conversões serão adicionadas aqui -->
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="caixaFooter">Desenvolvido por <a href="" target="_blank">Aluno Ctrl+Play</a>.</div>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>

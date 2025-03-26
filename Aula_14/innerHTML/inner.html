@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Escolha o Personagem da História</h1>
+    <img onclick="guerreiro()" src="imagens/guerreiro.jpg" alt="">
+    <img onclick="mago()" src="imagens/mago.jpg" alt="">
+    <p id="historia"></p>
+
+    <script>
+        function guerreiro() {
+            document.getElementById("historia").innerHTML = "Era uma vez um nobre guerreiro da programação..."
+        }
+
+        function mago() {
+             document.getElementById("historia").innerHTML = "Era uma vez um poderoso mago da robótica..."
+        }
+    </script>
+</body>
+</html>

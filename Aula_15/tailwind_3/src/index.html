@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalação TailWind CSS</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <h1 class="text-3xl font-bold underline mt-3">Tailwind css</h1>
+    
+    <h2 class="text-2xl font-bold underline mt-2">Instalando versão 3 do tailwind</h2>
+    <p class="text-red-500">npm install -D tailwindcss@3 postcss autoprefixer</p>
+    <p class="text-red-500">npx tailwindcss init</p>
+    
+    <h2 class="text-2xl font-bold underline mt-2">Input CSS File</h2>
+    <p class="text-red-500">@tailwind base;</p>
+    <p class="text-red-500">@tailwind components;</p>
+    <p class="text-red-500">@tailwind utilities;</p>
+    
+    <h2 class="text-2xl font-bold underline mt-2">Start the Tailwind CLI build process</h2>
+    <p>Run the CLI tool to scan your template files for classes and build your CSS.</p>
+    <p class="text-red-500">npx tailwindcss -i ./src/input.css -o ./src/output.css --watch</p>
+</body>
+
+</html>

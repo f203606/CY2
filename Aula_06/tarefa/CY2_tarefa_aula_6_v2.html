@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa Aula 6</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+        table {
+            width: 95vw;
+            height: 90vh;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 30px;
+        }
+
+        td {
+            border: 2px solid white;
+            text-align: center;
+            width: 50%;
+        }
+
+        td.destaque:hover {
+            background-color: yellow;
+        }
+
+        td.elemento::before {
+            content: "🔥";
+        }
+
+        img{
+            width: 100px;
+            transition: all 1s ease;
+        }
+         img:hover {
+            transform: rotateY(180deg);
+         }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Evoluções Pokemon</caption>
+        <tr>
+            <td class="destaque"><img src="charmander.png" alt=""></td>
+            <td class="elemento">História do Charmander</td>
+        </tr>
+        <tr>
+            <td class="destaque"><img src="charmeleon.png" alt=""></td>
+            <td class="elemento">História do Charmeleon</td>
+        </tr>
+        <tr>
+            <td class="destaque"><img src="charizard.png" alt=""></td>
+            <td class="elemento">História do Charizard</td>
+        </tr>
+    </table>
+</body>
+</html>
